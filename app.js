@@ -8,8 +8,19 @@ const app = Vue.createApp({
     //data es una función
     data () {
         return{
+            //todas las propiedades son reactivas, Vue no actualiza algo que no tuvo cambios
             quote: "Yo soy IronMan",
             author: "Tony Stark :D"
+        }
+    },
+    methods: {
+        changeQuote (){
+            console.log('Hola mundo e.e')
+            this.author = 'Hillary Gil'
+            this.capitalize()
+        },
+        capitalize() {
+            this.quote = this.quote.toUpperCase()
         }
     }
 

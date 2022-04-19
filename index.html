@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,10 @@
         <p>{{[1,2,3,4]}}</p> <!--aqui tambien se pueden poner expresiones de Vue-->
         <p>Desde index.html</p>
         <h3>{{quote}}</h3> <!--quote: fue traido desde el app.js-->
-        <blockquote>{{`Lo dijo: ${author}`}}</blockquote>
+        <blockquote>{{`-Lo dijo: ${author}`}}</blockquote>
+        <button v-on:click="changeQuote">
+            Change quote
+        </button>
     </div>
     {{1+1}}
     <!--libreria de VUE-->
