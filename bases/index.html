@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE</title>
+</head>
+<body>
+
+    <div id="myApp">
+        <!--aqui se va a renderizar todo lo que ordene Vue-->
+        <h1>Hola mundo </h1>
+        <p>{{[1,2,3,4]}}</p> <!--aqui tambien se pueden poner expresiones de Vue-->
+        <p>Desde index.html</p>
+        <h3>{{quote}}</h3> <!--quote: fue traido desde el app.js-->
+        <blockquote>{{`-Lo dijo: ${author}`}}</blockquote>
+        <button v-on:click="changeQuote">
+            Change quote
+        </button>
+    </div>
+    {{1+1}}
+    <!--libreria de VUE-->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>

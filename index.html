@@ -10,17 +10,19 @@
 
     <div id="myApp">
         <!--aqui se va a renderizar todo lo que ordene Vue-->
-        <h1>Hola mundo </h1>
-        <p>{{[1,2,3,4]}}</p> <!--aqui tambien se pueden poner expresiones de Vue-->
-        <p>Desde index.html</p>
-        <h3>{{quote}}</h3> <!--quote: fue traido desde el app.js-->
-        <blockquote>{{`-Lo dijo: ${author}`}}</blockquote>
-        <button v-on:click="changeQuote">
-            Change quote
-        </button>
+        <h1>Batman quotes</h1>
+        <ul>
+            <li v-for="({quote,author},index) in quotes"> 
+                <!--span>{{quote.quote}}</span--> <!--el primer quote es referencia a la iteracion, el segundo es una propiedad de los elementos del arreglo -->
+                <!--blockquote>-{{quote.author}}</blockquote-->
+
+                <!--Desestructurando el codigo-->
+                <span>{{index + 1}}-{{quote}}</span>
+                <blockquote>-{{author}}</blockquote>
+            </li>
+        </ul>
     </div>
-    {{1+1}}
-    <!--libreria de VUE-->
+        <!--libreria de VUE-->
     <script src="https://unpkg.com/vue@next"></script>
 
     <script src="app.js"></script>
