@@ -10,7 +10,14 @@
 
     <div id="myApp">
         <!--aqui se va a renderizar todo lo que ordene Vue-->
-        <h1>Batman quotes</h1>
+        <h1>Batman quotes <small>{{newQuote}}</small></h1>
+        <input 
+            type="text"
+            v-model="newQuote" 
+            v-on:keypress.enter="addQuote"><!--modificador de eventos: .enter-->
+
+        <hr>
+        
         <ul>
             <li v-for="({quote,author},index) in quotes"> 
                 <!--span>{{quote.quote}}</span--> <!--el primer quote es referencia a la iteracion, el segundo es una propiedad de los elementos del arreglo -->
