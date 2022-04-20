@@ -25,7 +25,11 @@
 
                 <!--Desestructurando el codigo-->
                 <span>{{index + 1}}-{{quote}}</span>
-                <blockquote>-{{author}}</blockquote>
+                <!--blockquote v-if="author != undefined">-{{author}}</blockquote-->
+                <blockquote v-show="author != undefined">-{{author}}</blockquote>
+
+                <!--La principal diferencia entre el v-if y v-show es que el v-show siempre va a construir
+                el elemento, solo que puede o no mostrarlo en la pantalla, v-if solo lo construira cuando sea necesario-->
             </li>
         </ul>
     </div>
